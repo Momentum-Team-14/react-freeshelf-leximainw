@@ -1,8 +1,8 @@
-import Developer from './Developer'
-import devs from './devs'
+import Book from './Book'
+import books from './books'
 
 const App = () => (
-    <>{devs.map(dev => <Developer dev={dev} />)}</>
+    <>{books.map(book => <Book book={book} />)}</>
 )
 
 export default App;
