@@ -12,7 +12,7 @@ const Developer = props => {
             buttonText={expanded ? 'Less Info' : 'More Info'}
             visible={[expanded, setExpanded]}
             >
-                {props.dev.expertise}
+                Expertise: {props.dev.expertise}
             </Accordion>
         </div>
     );
