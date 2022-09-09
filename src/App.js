@@ -1,7 +1,8 @@
+import Developer from './Developer'
 import devs from './devs'
 
 const App = () => (
-    <>{devs.map(dev => <div>{dev.name}</div>)}</>
+    <>{devs.map(dev => <Developer dev={dev} />)}</>
 )
 
 export default App;
