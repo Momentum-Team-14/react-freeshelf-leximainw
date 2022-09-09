@@ -4,9 +4,9 @@ import Accordion from './Accordion'
 const Developer = props => {
     const [expanded, setExpanded] = useState(false);
     return (
-        <div>
+        <div style={{marginBottom: '0.8rem', backgroundColor: '#eee', border: '1px solid #ccc', padding: '0.5rem'}}>
             <div>
-                {props.dev.name} {props.dev.available ? 'Looking for work' :''}
+                <span style={{marginRight: '1.2rem'}}>{props.dev.name}</span><span>{props.dev.available ? 'Looking for work' :''}</span>
             </div>
             <Accordion
             buttonText={expanded ? 'Less Info' : 'More Info'}
