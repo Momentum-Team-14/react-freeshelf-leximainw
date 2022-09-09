@@ -1,12 +1,21 @@
-const Developer = props => (
-    <div>
+import {useState} from 'react'
+import Accordion from './Accordion'
+
+const Developer = props => {
+    const [expanded, setExpanded] = useState(false);
+    return (
         <div>
-            {props.dev.name} {props.dev.available ? 'Looking for work' :''}
+            <div>
+                {props.dev.name} {props.dev.available ? 'Looking for work' :''}
+            </div>
+            <Accordion
+            buttonText={expanded ? 'Less Info' : 'More Info'}
+            visible={[expanded, setExpanded]}
+            >
+                {props.dev.expertise}
+            </Accordion>
         </div>
-        <div>
-            {props.dev.expertise}
-        </div>
-    </div>
-)
+    );
+};
 
 export default Developer;
