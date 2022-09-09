@@ -13,6 +13,12 @@ const Developer = props => {
             visible={[expanded, setExpanded]}
             >
                 Expertise: {props.dev.expertise}
+                {props.dev.image ?
+                    <div><img
+                    style={{maxWidth: props.dev.image.maxWidth || '20rem'}}
+                    src={props.dev.image.src}
+                    alt={props.dev.image.alt}
+                    /></div> : ''}
             </Accordion>
         </div>
     );
