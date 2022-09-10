@@ -19,13 +19,14 @@ const Book = props => {
                 <div>
                     <h2><a href={book.url}>{book.title}</a></h2>
                     <div>by {book.author}</div>
-                    {book.publicationDate ? <div>Published {book.publicationDate}{book.publisher ? ` by ${book.publisher}` : ''}</div> : ''}
                     <div>{book.shortDescription}</div>
                 </div>
                 <Accordion
                 buttonText={expanded ? 'Less Info' : 'More Info'}
                 visible={[expanded, setExpanded]}
                 >
+                    {book.publicationDate ? <div>Published {book.publicationDate}{book.publisher ? ` by ${book.publisher}` : ''}</div> : ''}
+                    <div>URL: <a href={book.url}>{book.url}</a></div>
                     <p>{book.detailedDescription}</p>
                 </Accordion>
             </div>
